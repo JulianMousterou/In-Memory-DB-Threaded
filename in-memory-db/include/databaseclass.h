@@ -68,8 +68,6 @@ public:
 	void loadFromJSON();
 	void periodicalSaveToJSON(); 
 
-	void setTimeToLive(const std::string& key, const int& time);
-	void LRUCache(const std::string& key);
 
 };
 
