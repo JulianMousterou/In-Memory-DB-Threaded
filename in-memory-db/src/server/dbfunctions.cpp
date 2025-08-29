@@ -139,31 +139,3 @@ void Database::removeArrayElement(const std::string& key, const int& index){
 void Database::removeStringElement(const std::string& key, const int& index){
 	strings[key].erase(strings[key].begin() + index);
 }
-void Database::setTimeToLive(const std::string& key, const int& time){
-	
-	auto typeFind = key_types.find(key); 
-
-	std::string type = typeFind->second;
-	if(type=="hashmaps"){
-		std::this_thread::sleep_for(std::chrono::seconds(time)); 
-		hashmaps.erase(key);
-	} 
-	else if(type=="string"){
-		std::this_thread::sleep_for(std::chrono::seconds(time)); 
-		strings.erase(key);	
-	}
-	else if(type=="array"){
-		std::this_thread::sleep_for(std::chrono::seconds(time)); 
-		arrays.erase(key);	
-
-	} 
-	else{
-		throw std::runtime_error("INVALID TYPE"); 
-	} 
-
-
-		
-} 
-void Database::LRUCache(){
-
-} 
