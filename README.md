@@ -22,4 +22,4 @@ To start the server, create an object of class "Client", and then call "ClientSt
 When using "sendReq()", it required to be terminated with a newline as that acts as the delimiter for the request, without it requests will group and not function fully correct at runtime.
 
 ### Notes for the Future 
-I'm looking to possibly refactor this. I've seen that blocking sockets are not the majority option when it comes to handling current connections and likely wont be used in production, but either way this was a great learning experience for me to learn about mutexes, threading, sockets, and dealing memory management issues like out-of-bounds errors and race conditions.
+I'm looking to possibly refactor this. I've seen that blocking sockets are not the majority option when it comes to handling concurrent connections and likely wont be used in production, but either way this was a great learning experience for me to learn about mutexes, threading, sockets, and dealing memory management issues like out-of-bounds errors and race conditions.
